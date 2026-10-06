@@ -1,0 +1,18 @@
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@1&display=swap");
+@import "tailwindcss";
+@import "./fonts.css";
+
+@theme {
+  --font-sans: "Satoshi", ui-sans-serif, system-ui, sans-serif;
+  --font-pixel: "Geist Pixel Grid", "Satoshi", ui-monospace, monospace;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background: #0a0a0a;
+  color: #ededed;
+  font-family: var(--font-sans);
+}

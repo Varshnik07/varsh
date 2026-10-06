@@ -1,0 +1,17 @@
+/*
+ * Satoshi (body) is loaded via Fontshare's hosted CSS API from theme.css —
+ * @import rules must come first in a stylesheet, so it can't live here.
+ * Satoshi is ITF-licensed and self-hosting it needs their written consent.
+ */
+
+/*
+ * Geist Pixel Grid (headings), self-hosted from the `geist` npm package
+ * (OFL-1.1, see public/fonts/GEIST-LICENSE.txt).
+ */
+@font-face {
+  font-family: "Geist Pixel Grid";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/GeistPixel-Grid.woff2") format("woff2");
+}

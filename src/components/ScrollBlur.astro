@@ -1,0 +1,22 @@
+---
+// Bottom-of-viewport blur that fades out once the page is scrolled, and
+// back in once scroll returns near the top.
+---
+
+<div
+  id="scroll-blur"
+  class="pointer-events-none fixed inset-x-0 bottom-0 z-30 h-32 bg-gradient-to-t from-[#0a0a0a] to-transparent backdrop-blur-sm transition-opacity duration-300"
+>
+</div>
+
+<script>
+  const blur = document.getElementById("scroll-blur");
+
+  function updateBlur() {
+    if (!blur) return;
+    blur.style.opacity = window.scrollY > 24 ? "0" : "1";
+  }
+
+  updateBlur();
+  document.addEventListener("scroll", updateBlur, { passive: true });
+</script>
