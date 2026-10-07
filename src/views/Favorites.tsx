@@ -4,7 +4,7 @@ import { favorites } from "../data/favorites";
 export default function Favorites() {
   return (
     <section id="favorites" className="mx-auto max-w-2xl px-6 py-24">
-      <SectionHeading index="05" title="Favorites" />
+      <SectionHeading index="06" title="Favorites" />
       <ul className="space-y-2">
         {favorites.map((item) => (
           <li key={item.label} className="flex justify-between text-sm">

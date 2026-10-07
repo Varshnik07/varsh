@@ -6,7 +6,7 @@ export default function AllProjects() {
   return (
     <GridFrame>
       <main className="px-6 py-24">
-        <SectionHeading index="03" title="All projects" />
+        <SectionHeading index="04" title="All projects" />
         <ul className="grid gap-4 sm:grid-cols-2">
           {projects.map((project) => (
             <li

@@ -4,7 +4,7 @@ import { writing } from "../data/writing";
 export default function Writing() {
   return (
     <section id="writing" className="mx-auto max-w-2xl px-6 py-24">
-      <SectionHeading index="06" title="Sharing what I learn" />
+      <SectionHeading index="07" title="Sharing what I learn" />
       <ul className="space-y-3">
         {writing.map((post) => (
           <li key={post.title} className="flex justify-between">
