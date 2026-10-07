@@ -14,6 +14,8 @@ export default function Skills() {
           >
             {skill.path ? (
               <BrandIcon path={skill.path} color={skill.color} className="h-4 w-4 shrink-0" />
+            ) : skill.img ? (
+              <img src={skill.img} alt="" className="h-4 w-4 shrink-0 rounded-[3px] object-cover" />
             ) : (
               <span
                 className="h-4 w-4 shrink-0 rounded-sm"
