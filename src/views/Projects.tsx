@@ -6,7 +6,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="mx-auto max-w-2xl px-6 py-24">
-      <SectionHeading index="03" title="Things I've built" />
+      <SectionHeading index="04" title="Things I've built" />
       <ul className="grid gap-4 sm:grid-cols-2">
         {featured.map((project) => (
           <li

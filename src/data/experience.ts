@@ -1,6 +1,7 @@
 export const experience = [
   {
     org: "Oogway Labs",
+    logo: "/logos/oogway-labs.svg",
     role: "Forward Deployed Engineer",
     period: "Aug 2025 — Present",
     summary:
@@ -8,6 +9,7 @@ export const experience = [
   },
   {
     org: "5C Network",
+    logo: "/logos/5c-network.png",
     role: "Product Management Intern, AI & Data Products",
     period: "Jan 2025 — Jul 2025",
     summary:
@@ -15,6 +17,7 @@ export const experience = [
   },
   {
     org: "VidhyaVidhai Foundation",
+    logo: "/logos/vidhyavidhai.png",
     role: "AI Research Intern",
     period: "Jun 2024 — Jul 2024",
     summary:

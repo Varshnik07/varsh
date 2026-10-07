@@ -1,25 +1,29 @@
-import { useState } from "react";
+import SectionHeading from "../components/SectionHeading";
+import BrandIcon from "../components/BrandIcon";
 import { skills } from "../data/skills";
 
 export default function Skills() {
-  const [hovered, setHovered] = useState<string | null>(null);
-
   return (
-    <section className="mx-auto max-w-2xl px-6 py-12">
-      <div className="flex flex-wrap gap-3">
+    <section id="skills" className="mx-auto max-w-2xl px-6 py-24">
+      <SectionHeading index="02" title="Skills" />
+      <div className="flex flex-wrap gap-2">
         {skills.map((skill) => (
           <div
-            key={skill}
-            onMouseEnter={() => setHovered(skill)}
-            onMouseLeave={() => setHovered(null)}
-            className="group relative flex h-12 w-12 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-xs text-white/60 transition-colors hover:border-emerald-400/40 hover:text-white"
+            key={skill.name}
+            className="group flex h-10 items-center rounded-lg border border-dashed border-white/15 bg-white/[0.03] px-3 transition-colors duration-200 hover:bg-white/[0.06]"
           >
-            {skill.slice(0, 2)}
-            {hovered === skill && (
-              <span className="absolute -top-8 whitespace-nowrap rounded-md bg-black px-2 py-1 text-xs text-white shadow">
-                {skill}
-              </span>
+            {skill.path ? (
+              <BrandIcon path={skill.path} color={skill.color} className="h-4 w-4 shrink-0" />
+            ) : (
+              <span
+                className="h-4 w-4 shrink-0 rounded-sm"
+                style={{ backgroundColor: skill.color }}
+                aria-hidden="true"
+              />
             )}
+            <span className="ml-0 max-w-0 overflow-hidden whitespace-nowrap text-xs text-white/70 opacity-0 transition-all duration-200 ease-out group-hover:ml-2 group-hover:max-w-[140px] group-hover:opacity-100">
+              {skill.name}
+            </span>
           </div>
         ))}
       </div>
