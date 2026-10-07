@@ -1,8 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Home from "../views/Home";
+import { getContributionCount } from "../lib/github";
+
+const contributions = await getContributionCount("Varshnik07");
 ---
 
 <BaseLayout path="/">
-  <Home client:load />
+  <Home client:load contributions={contributions} />
 </BaseLayout>

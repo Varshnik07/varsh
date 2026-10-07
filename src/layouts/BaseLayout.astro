@@ -1,6 +1,5 @@
 ---
 import CtaCluster from "../components/CtaCluster.astro";
-import ScrollBlur from "../components/ScrollBlur.astro";
 import "../theme.css";
 
 interface Props {
@@ -23,6 +22,5 @@ const { title = "Varshini Jeyachandran", description } = Astro.props;
   <body class="font-sans">
     <CtaCluster />
     <slot />
-    <ScrollBlur />
   </body>
 </html>

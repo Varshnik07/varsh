@@ -13,7 +13,11 @@ import Writing from "./Writing";
 import GithubActivity from "./GithubActivity";
 import Footer from "./Footer";
 
-export default function Home() {
+interface Props {
+  contributions: number | null;
+}
+
+export default function Home({ contributions }: Props) {
   return (
     <GridFrame>
       <DotGridPanel />
@@ -33,7 +37,7 @@ export default function Home() {
       <GridDivider />
       <Writing />
       <GridDivider />
-      <GithubActivity />
+      <GithubActivity contributions={contributions} />
       <GridDivider />
       <Footer />
     </GridFrame>
